@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Blockchain History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Block #</th>
+                    <th>Product ID</th>
+                    <th>Checkpoint</th>
+                    <th>Date Receival</th>
+                    <th>Date Shipping</th>
+                    <th>Manager</th>
+                    <th>Notes</th>
+                    <th>Timestamp</th>
+                    <th>Previous Hash</th>
+                </tr>
+            </thead>
+            <tbody id="blockchainTable"></tbody>
+        </table>
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+
+    <script>
+        async function fetchBlockchain() {
+            const response = await fetch('/api/get_chain');
+            const data = await response.json();
+            const table = document.getElementById('blockchainTable');
+
+            if (data.chain.length === 0) {
+                table.innerHTML = "<tr><td colspan='9'>No blockchain data found.</td></tr>";
+                return;
+            }
+
+            data.chain.forEach(block => {
+                let row = `<tr>
+                    <td>${block.index}</td>
+                    <td>${block.productId || "N/A"}</td>
+                    <td>${block.checkpoint || "N/A"}</td>
+                    <td>${block.dateReceival || "N/A"}</td>
+                    <td>${block.dateShipping || "N/A"}</td>
+                    <td>${block.manager || "N/A"}</td>
+                    <td>${block.notes || "N/A"}</td>
+                    <td>${new Date(block.timestamp * 1000).toLocaleString()}</td>
+                    <td>${block.previous_hash}</td>
+                </tr>`;
+                table.innerHTML += row;
+            });
+        }
+        fetchBlockchain();
+    </script>
+</body>
+</html>

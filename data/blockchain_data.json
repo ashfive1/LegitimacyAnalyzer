@@ -1,0 +1,219 @@
+[
+    {
+        "index": 0,
+        "previous_hash": "0",
+        "data": "Genesis Block",
+        "timestamp": 1739571274.0882068,
+        "hash": "fa8d8bd5405c9771f3050b05028bdb2a9d71f0797b91576229d603de098bd449"
+    },
+    {
+        "index": 1,
+        "previous_hash": "fa8d8bd5405c9771f3050b05028bdb2a9d71f0797b91576229d603de098bd449",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Raw Material Inspection",
+            "dateReceival": "2021-01-01",
+            "dateShipping": "2021-01-14",
+            "manager": "Manager1",
+            "notes": "",
+            "legitimacyScore": 94
+        },
+        "timestamp": 1739571318.1622221,
+        "hash": "dcd1db414fdac09569541f35cd32db45c503d204be6a51f0dd31bce1f612a31c"
+    },
+    {
+        "index": 2,
+        "previous_hash": "dcd1db414fdac09569541f35cd32db45c503d204be6a51f0dd31bce1f612a31c",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Raw Material Inspection",
+            "dateReceival": "2021-01-01",
+            "dateShipping": "2021-01-14",
+            "manager": "Manager1",
+            "notes": "No problems in logistics. All materials have arrived without trouble. Passed.",
+            "legitimacyScore": 98
+        },
+        "timestamp": 1739571376.1414669,
+        "hash": "6d331445df8afaca100e3a41fc07f29dbf2dff8588bc452866108003ae5ed60a"
+    },
+    {
+        "index": 3,
+        "previous_hash": "6d331445df8afaca100e3a41fc07f29dbf2dff8588bc452866108003ae5ed60a",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Manufacturing",
+            "dateReceival": "2021-01-17",
+            "dateShipping": "2021-01-31",
+            "manager": "Manager1",
+            "notes": "No problems in logistics. All materials have arrived without trouble. Passed.",
+            "legitimacyScore": 98
+        },
+        "timestamp": 1739571396.018971,
+        "hash": "bbf075ed88e53ce079757f837d6deb57888bf0e9e06f93c66dac5da22fb67875"
+    },
+    {
+        "index": 4,
+        "previous_hash": "bbf075ed88e53ce079757f837d6deb57888bf0e9e06f93c66dac5da22fb67875",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Manufacturing",
+            "dateReceival": "2021-01-17",
+            "dateShipping": "2021-01-31",
+            "manager": "Manager2",
+            "notes": "Received materials with slight delay. No accidents during manufacturing stage. Passed onto next stage.",
+            "legitimacyScore": 64
+        },
+        "timestamp": 1739571453.6194577,
+        "hash": "d39172df85f20d0c09c89969184ca471fce0b0fb10bab42bb3b22ce5d45315b7"
+    },
+    {
+        "index": 5,
+        "previous_hash": "d39172df85f20d0c09c89969184ca471fce0b0fb10bab42bb3b22ce5d45315b7",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Assembly",
+            "dateReceival": "2020-02-03",
+            "dateShipping": "2021-02-12",
+            "manager": "Manager3",
+            "notes": "Approved materials for assembly. Few defects detected. Legitimacy is maintained with quality of products. Good to go for next step.",
+            "legitimacyScore": 99
+        },
+        "timestamp": 1739571515.5781417,
+        "hash": "1aa8e8bd50959dc600f0372a09eff7f2e0649b78f858404d44f6410f099c689b"
+    },
+    {
+        "index": 6,
+        "previous_hash": "1aa8e8bd50959dc600f0372a09eff7f2e0649b78f858404d44f6410f099c689b",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Quality Check",
+            "dateReceival": "2020-02-14",
+            "dateShipping": "2021-02-16",
+            "manager": "Manager4",
+            "notes": "Batch tested and approved by quality check team. Little to no defects found. Negligible amounts of human error was found. Passed onto next stage.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571583.3965604,
+        "hash": "a4db01dc8e46f565bb5284540e9fd617c0c2a3c310c8c8381c89bc9c75e56b96"
+    },
+    {
+        "index": 7,
+        "previous_hash": "a4db01dc8e46f565bb5284540e9fd617c0c2a3c310c8c8381c89bc9c75e56b96",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Packaging",
+            "dateReceival": "2020-02-21",
+            "dateShipping": "2021-02-27",
+            "manager": "Manager5",
+            "notes": "Tested for quality of products one final time before packing the finished batch. Sent to shipping team.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571632.166213,
+        "hash": "90982476136ea5fcb3698f88d9c7f426aaa259318b874a200a352cbfa12bff21"
+    },
+    {
+        "index": 8,
+        "previous_hash": "90982476136ea5fcb3698f88d9c7f426aaa259318b874a200a352cbfa12bff21",
+        "data": {
+            "productId": "69420",
+            "checkpoint": "Final Shipping",
+            "dateReceival": "2020-02-28",
+            "dateShipping": "2021-03-15",
+            "manager": "Manager6",
+            "notes": "Received all batches without any missing pieces. Sent out to shipping after logistics verifications. Perfect process and no error was made.",
+            "legitimacyScore": 99
+        },
+        "timestamp": 1739571684.6925263,
+        "hash": "36cf47dca63042efad62de6d2875ca66fd3acb39611b353c1da6bf13314c6b22"
+    },
+    {
+        "index": 9,
+        "previous_hash": "36cf47dca63042efad62de6d2875ca66fd3acb39611b353c1da6bf13314c6b22",
+        "data": {
+            "productId": "80085",
+            "checkpoint": "Raw Material Inspection",
+            "dateReceival": "2023-01-01",
+            "dateShipping": "2023-01-03",
+            "manager": "Manager1",
+            "notes": "Recieved raw materials at factory. Logistics team had a delay of 3 days, which led to disruption in schedule. Sent to factory.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571761.0074084,
+        "hash": "4a5e80aa07f52320ad46fe756b3896dcab82ae4f19028d06457eb79b8467daad"
+    },
+    {
+        "index": 10,
+        "previous_hash": "4a5e80aa07f52320ad46fe756b3896dcab82ae4f19028d06457eb79b8467daad",
+        "data": {
+            "productId": "80085",
+            "checkpoint": "Manufacturing",
+            "dateReceival": "2023-01-06",
+            "dateShipping": "2023-01-12",
+            "manager": "Manager2",
+            "notes": "Received raw materials with poor quality and care taken to transport materials. Damaged goods were found while unpacking at factory. Passed onto next stage with a yellow flag.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571830.2184837,
+        "hash": "68376420add04489c055e2156509ba6786a7eb711254f59af464060e172c0856"
+    },
+    {
+        "index": 11,
+        "previous_hash": "68376420add04489c055e2156509ba6786a7eb711254f59af464060e172c0856",
+        "data": {
+            "productId": "80085",
+            "checkpoint": "Assembly",
+            "dateReceival": "2023-01-14",
+            "dateShipping": "2023-01-23",
+            "manager": "Manager3",
+            "notes": "Received warning of yellow flag. Team was only able to complete 70% of predicted quantity of products. This led to a delay in schedule to wait for new materials to arrive and complete the current batch. Passed onto the next batch with a delay of 5 days.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571898.892452,
+        "hash": "009ab52964c4566b4c1b62e6a14affcc90dbb051aa8046ea32ac12d89130efe7"
+    },
+    {
+        "index": 12,
+        "previous_hash": "009ab52964c4566b4c1b62e6a14affcc90dbb051aa8046ea32ac12d89130efe7",
+        "data": {
+            "productId": "80085",
+            "checkpoint": "Quality Check",
+            "dateReceival": "2023-01-25",
+            "dateShipping": "2023-01-31",
+            "manager": "Manager4",
+            "notes": "Quality was not the best condition. There were defective pieces found in the batch. They had to be scrapped or completely thrown out. Moved onto next stage.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571950.767155,
+        "hash": "00773fe3963e3f37f1ee337c64d00c81800a0aed84b4b629a6d474c2a4de5b56"
+    },
+    {
+        "index": 13,
+        "previous_hash": "00773fe3963e3f37f1ee337c64d00c81800a0aed84b4b629a6d474c2a4de5b56",
+        "data": {
+            "productId": "80085",
+            "checkpoint": "Packaging",
+            "dateReceival": "2023-02-03",
+            "dateShipping": "2023-02-07",
+            "manager": "Manager5",
+            "notes": "Packaging team had to work Over Time to match with schedule since previous teams messed up with the schedule and process. Passed onto next stage on time.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739571997.9146304,
+        "hash": "de04bbf70bbb283f77fae07bcab7fdc069804b807b279a97757d91b4ca6d00ae"
+    },
+    {
+        "index": 14,
+        "previous_hash": "de04bbf70bbb283f77fae07bcab7fdc069804b807b279a97757d91b4ca6d00ae",
+        "data": {
+            "productId": "80085",
+            "checkpoint": "Final Shipping",
+            "dateReceival": "2023-02-08",
+            "dateShipping": "2023-02-20",
+            "manager": "Manager6",
+            "notes": "Sent to shipment to distributors and retailers with a slight delay. Overall, it was not a productive batch.",
+            "legitimacyScore": 61
+        },
+        "timestamp": 1739572039.2261045,
+        "hash": "52c8dc22eb96a6713ab0c2b52df7b12c9b98b2d7e3b1e315d8f51496879f7b72"
+    }
+]

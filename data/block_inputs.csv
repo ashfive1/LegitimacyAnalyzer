@@ -1,0 +1,16 @@
+1234,Raw Material Inspection,2025-01-01,2025-01-14,Ashwanth,Perfect quality of materials. No obstacles observed when processing or shipping to next checkpoint. Great.,99
+1234,Component Manufacturing,2025-01-15,2025-01-20,Jeffrey,Bad quality of materials. Defects.,61
+12345,Shipment into market,2022-12-15,2022-12-30,Kalyan,Carried out perfectly. Faced errors in previous checkpoints which led to some hurdles in timing of release into market.,61
+69420,Raw Material Inspection,2021-01-01,2021-01-14,Manager1,No problems in logistics. All materials have arrived without trouble. Passed.,98
+
+69420,Manufacturing,2021-01-17,2021-01-31,Manager2,Received materials with slight delay. No accidents during manufacturing stage. Passed onto next stage.,64
+69420,Assembly,2020-02-03,2021-02-12,Manager3,Approved materials for assembly. Few defects detected. Legitimacy is maintained with quality of products. Good to go for next step.,99
+69420,Quality Check,2020-02-14,2021-02-16,Manager4,Batch tested and approved by quality check team. Little to no defects found. Negligible amounts of human error was found. Passed onto next stage.,61
+69420,Packaging,2020-02-21,2021-02-27,Manager5,Tested for quality of products one final time before packing the finished batch. Sent to shipping team.,61
+69420,Final Shipping,2020-02-28,2021-03-15,Manager6,Received all batches without any missing pieces. Sent out to shipping after logistics verifications. Perfect process and no error was made.,99
+80085,Raw Material Inspection,2023-01-01,2023-01-03,Manager1,"Recieved raw materials at factory. Logistics team had a delay of 3 days, which led to disruption in schedule. Sent to factory.",61
+80085,Manufacturing,2023-01-06,2023-01-12,Manager2,Received raw materials with poor quality and care taken to transport materials. Damaged goods were found while unpacking at factory. Passed onto next stage with a yellow flag.,61
+80085,Assembly,2023-01-14,2023-01-23,Manager3,Received warning of yellow flag. Team was only able to complete 70% of predicted quantity of products. This led to a delay in schedule to wait for new materials to arrive and complete the current batch. Passed onto the next batch with a delay of 5 days.,61
+80085,Quality Check,2023-01-25,2023-01-31,Manager4,Quality was not the best condition. There were defective pieces found in the batch. They had to be scrapped or completely thrown out. Moved onto next stage.,61
+80085,Packaging,2023-02-03,2023-02-07,Manager5,Packaging team had to work Over Time to match with schedule since previous teams messed up with the schedule and process. Passed onto next stage on time.,61
+80085,Final Shipping,2023-02-08,2023-02-20,Manager6,"Sent to shipment to distributors and retailers with a slight delay. Overall, it was not a productive batch.",61

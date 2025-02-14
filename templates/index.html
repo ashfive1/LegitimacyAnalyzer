@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain + AI Product Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Verification System</h1>
+        
+        <form id="addBlockForm">
+            <h2>Add Product Data</h2>
+            <input type="text" id="productId" placeholder="Product ID" required>
+            <select id="checkpoint" required>
+                <option value="Raw Material Inspection">Raw Material Inspection</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Assembly">Assembly</option>
+                <option value="Quality Check">Quality Check</option>
+                <option value="Packaging">Packaging</option>
+                <option value="Final Shipping">Final Shipping</option>
+            </select>
+            <input type="date" id="dateReceival" required>
+            <input type="date" id="dateShipping" required>
+            <input type="text" id="manager" placeholder="Manager" required>
+            <textarea id="notes" placeholder="Notes"></textarea>
+            <button type="submit">Add Block</button>
+        </form>
+
+        <form id="verifyProductForm">
+            <h2>Verify Product</h2>
+            <input type="text" id="verifyProductId" placeholder="Product ID" required>
+            <button type="submit">Verify</button>
+        </form>
+
+        <div id="result"></div>
+        <img id="qrCode" style="display:none; width:200px;">
+        <button id="openQRBtn" style="display:none;">Open QR</button>
+
+        <div class="button-group">
+            <button id="viewBlockchainBtn">View Blockchain</button>
+            <button id="installBtn" style="display: none;">Install App</button>
+        </div>
+    </div>
+
+    <script>
+        // Add product block to blockchain
+        document.getElementById('addBlockForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = {
+                productId: document.getElementById('productId').value,
+                checkpoint: document.getElementById('checkpoint').value,
+                dateReceival: document.getElementById('dateReceival').value,
+                dateShipping: document.getElementById('dateShipping').value,
+                manager: document.getElementById('manager').value,
+                notes: document.getElementById('notes').value
+            };
+            const response = await fetch('/add_block', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            alert(result.message);
+        });
+
+        // Verify product and generate QR code
+        document.getElementById('verifyProductForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const productId = document.getElementById('verifyProductId').value;
+            const response = await fetch('/verify_product', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId })
+            });
+
+            const result = await response.json();
+            if (result.error) {
+                document.getElementById('result').innerText = `Error: ${result.error}`;
+            } else {
+                document.getElementById('result').innerText = `Average Legitimacy Score: ${result.averageLegitimacyScore}`;
+                document.getElementById('qrCode').src = result.qrCode;
+                document.getElementById('qrCode').style.display = "block";
+
+                // Open QR button leads to product page
+                document.getElementById('openQRBtn').style.display = "block";
+                document.getElementById('openQRBtn').onclick = function () {
+                    window.open(`/product/${productId}`, "_blank");
+                };
+            }
+        });
+
+        // View Blockchain History
+        document.getElementById('viewBlockchainBtn').addEventListener('click', () => {
+            window.location.href = "/get_chain";
+        });
+
+        // PWA: Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/static/sw.js')
+                    .then(reg => console.log("Service Worker Registered!", reg))
+                    .catch(err => console.log("Service Worker Failed!", err));
+            });
+        }
+
+        // PWA: Install App
+        let deferredPrompt;
+        const installBtn = document.getElementById("installBtn");
+
+        window.addEventListener("beforeinstallprompt", (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = "block";
+        });
+
+        installBtn.addEventListener("click", () => {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(choice => {
+                if (choice.outcome === "accepted") {
+                    console.log("App Installed!");
+                }
+                installBtn.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>

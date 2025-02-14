@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark theme */
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #00A8E8;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 168, 232, 0.5);
+}
+
+button {
+    background-color: #00A8E8;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0077B6;
+}
+
+button:active {
+    background-color: #005f8e;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+/* Date input styling */
+input[type="date"] {
+    padding: 8px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #555;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.close {
+    color: #bbb;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+/* Prettified blockchain output */
+pre {
+    text-align: left;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    color: #00A8E8;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+}
